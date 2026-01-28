@@ -1,2 +1,98 @@
 # serviciosdkcl-cell.github.io
-Sitio web profesional de SDK ENTERTAINMENT dedicado a servicios de fotografía, video y diseño gráfico para eventos, marcas y proyectos creativos.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>SDK ENTERTAINMENT | Fotografía y Video Profesional</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SDK ENTERTAINMENT ofrece servicios profesionales de fotografía, video y diseño gráfico para eventos, negocios y proyectos creativos en Chile.">
+<meta name="author" content="SDK ENTERTAINMENT">
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0f0f0f;
+  color:#ffffff;
+}
+header{
+  background:#000;
+  padding:80px 20px;
+  text-align:center;
+}
+header h1{
+  color:#f5c542;
+  font-size:36px;
+  margin-bottom:10px;
+}
+header p{
+  font-size:18px;
+  margin-bottom:30px;
+}
+.btn{
+  display:inline-block;
+  background:#f5c542;
+  color:#000;
+  padding:15px 30px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:6px;
+}
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+section h2{
+  color:#f5c542;
+  margin-bottom:20px;
+}
+.services{
+  max-width:900px;
+  margin:auto;
+  font-size:18px;
+}
+.services p{
+  margin:10px 0;
+}
+footer{
+  background:#000;
+  padding:20px;
+  text-align:center;
+  font-size:14px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>SDK ENTERTAINMENT</h1>
+  <p>Fotografía · Video · Diseño Gráfico</p>
+  <a class="btn" href="https://wa.me/569XXXXXXXX">Contáctanos por WhatsApp</a>
+</header>
+
+<section>
+  <h2>Servicios Profesionales</h2>
+  <div class="services">
+    <p>📸 Fotografía profesional para eventos y marcas</p>
+    <p>🎥 Producción y edición de video</p>
+    <p>🎨 Diseño gráfico y material publicitario</p>
+  </div>
+</section>
+
+<section>
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="services">
+    <p>✔️ Calidad profesional</p>
+    <p>✔️ Atención personalizada</p>
+    <p>✔️ Experiencia y creatividad</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SDK ENTERTAINMENT · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
