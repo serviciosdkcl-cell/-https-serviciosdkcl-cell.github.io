@@ -12,11 +12,6 @@ SDK ENTERTAINMENT es una marca creativa dedicada a ofrecer servicios profesional
 ## 🌐 Sitio web
 👉 https://serviciosdkcl-cell.github.io
 
-## 🛠 Tecnologías utilizadas
-- HTML5
-- CSS3
-- GitHub Pages
-
 ## 📞 Contacto
 📱 WhatsApp: +56 964286114  
 📧 Email: serviciosdk.cl@gmail.com
