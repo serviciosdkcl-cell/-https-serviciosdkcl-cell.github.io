@@ -1,6 +1,369 @@
-index.html
+ndex.html
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monetize Facebook ak AI — Gid Konplè pou Kreyatè Kontni</title>
+<meta name="description" content="Aprann kijan pou itilize AI pou kreye kontni, grandi paj Facebook/Instagram ou epi debloke monetizasyon — etap pa etap, san pale konplike.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0F1A;
+    --surface:#131A2B;
+    --surface-2:#1B2438;
+    --text:#F5F7FA;
+    --muted:#8B96AD;
+    --lime:#C8FF4D;
+    --coral:#FF6B4A;
+    --line:#242F47;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.01em;}
+  a{color:inherit;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  @media (max-width:640px){ section{padding:64px 0;} }
+
+  /* Nav */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,15,26,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1080px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;}
+  .brand span{color:var(--lime);}
+  .nav-cta{
+    background:var(--lime);color:#0B0F1A;font-weight:600;font-size:0.9rem;
+    padding:9px 18px;border-radius:8px;text-decoration:none;
+  }
+
+  /* Hero */
+  .hero{padding:88px 0 72px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--lime);
+    background:rgba(200,255,77,0.08);border:1px solid rgba(200,255,77,0.25);
+    padding:6px 12px;border-radius:20px;margin-bottom:24px;
+  }
+  .hero h1{font-size:2.8rem;line-height:1.08;max-width:680px;}
+  @media (max-width:640px){ .hero h1{font-size:2rem;} }
+  .hero p.sub{color:var(--muted);font-size:1.1rem;max-width:520px;margin:22px 0 32px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{
+    background:var(--coral);color:#fff;font-weight:600;
+    padding:15px 28px;border-radius:10px;text-decoration:none;
+    display:inline-block;transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 8px 24px rgba(255,107,74,0.25);
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-primary:focus-visible, a:focus-visible, button:focus-visible{
+    outline:2px solid var(--lime);outline-offset:3px;
+  }
+  .hero-note{color:var(--muted);font-size:0.85rem;}
+
+  /* Signature: live earnings counter widget */
+  .counter-card{
+    margin-top:56px;
+    background:var(--surface);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;max-width:420px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .counter-card .label{font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;}
+  .counter-card .value{font-size:1.9rem;font-family:'JetBrains Mono',monospace;color:var(--lime);font-weight:600;}
+  .counter-dot{width:8px;height:8px;border-radius:50%;background:var(--lime);display:inline-block;margin-right:6px;
+    box-shadow:0 0 0 0 rgba(200,255,77,0.6);animation:pulse 1.8s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(200,255,77,0.5);}
+    70%{box-shadow:0 0 0 8px rgba(200,255,77,0);}
+    100%{box-shadow:0 0 0 0 rgba(200,255,77,0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .counter-dot{animation:none;}
+    .btn-primary{transition:none;}
+  }
+
+  /* Section headers */
+  .section-eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--coral);
+    text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;
+  }
+  .section-title{font-size:1.9rem;margin-bottom:44px;max-width:560px;}
+
+  /* Benefits grid */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:800px){ .grid-3{grid-template-columns:1fr;} }
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;
+  }
+  .card h3{font-size:1.05rem;margin-bottom:10px;}
+  .card p{color:var(--muted);font-size:0.94rem;}
+
+  /* How it works - real sequence, numbering justified */
+  .steps{display:flex;flex-direction:column;gap:0;}
+  .step{
+    display:flex;gap:24px;padding:28px 0;border-top:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:1px solid var(--line);}
+  .step-num{
+    font-family:'JetBrains Mono',monospace;color:var(--lime);font-size:1rem;
+    min-width:36px;
+  }
+  .step h3{font-size:1.1rem;margin-bottom:6px;}
+  .step p{color:var(--muted);font-size:0.94rem;max-width:520px;}
+
+  /* Use cases */
+  .usecase-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  @media (max-width:700px){ .usecase-list{grid-template-columns:1fr;} }
+  .usecase{
+    background:var(--surface-2);border-radius:12px;padding:20px 22px;
+    display:flex;align-items:flex-start;gap:14px;
+  }
+  .usecase-tag{
+    font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--bg);
+    background:var(--lime);padding:3px 8px;border-radius:6px;white-space:nowrap;margin-top:2px;
+  }
+  .usecase p{color:var(--text);font-size:0.94rem;}
+
+  /* Testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:800px){ .testi-grid{grid-template-columns:1fr;} }
+  .testi{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;
+  }
+  .testi p.quote{font-size:0.95rem;margin-bottom:16px;}
+  .testi .who{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);}
+  .testi-placeholder-note{
+    color:var(--muted);font-size:0.82rem;margin-top:20px;font-style:italic;
+  }
+
+  /* FAQ */
+  .faq-item{border-top:1px solid var(--line);padding:20px 0;}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.02rem;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';color:var(--lime);font-size:1.3rem;font-family:'JetBrains Mono',monospace;}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{color:var(--muted);margin-top:12px;font-size:0.94rem;max-width:600px;}
+
+  /* Final CTA */
+  .final-cta{
+    background:linear-gradient(135deg,var(--surface) 0%, var(--surface-2) 100%);
+    border:1px solid var(--line);border-radius:20px;
+    padding:64px 40px;text-align:center;
+  }
+  @media (max-width:640px){ .final-cta{padding:44px 22px;} }
+  .final-cta h2{font-size:2rem;max-width:520px;margin:0 auto 16px;}
+  .final-cta p{color:var(--muted);max-width:440px;margin:0 auto 32px;}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted);font-size:0.85rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">Gid<span>AI</span>Monetize</div>
+    <a class="nav-cta" href="#cta">Achte Gid la</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="counter-dot"></span>Gid Dijital · Livrezon Imedya</span>
+    <h1>Aprann Monetize Facebook & Instagram ou avèk AI</h1>
+    <p class="sub">Yon gid pratik ki montre w etap pa etap kijan pou kreye kontni ak AI, grandi paj ou, epi debloke monetizasyon Facebook — menm si ou pa gen eksperyans teknik.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#cta">Achte Gid la Kounye a →</a>
+      <span class="hero-note">Peman sekirize sou Gumroad</span>
+    </div>
+
+    <div class="counter-card">
+      <div>
+        <div class="label">REVNI KREYATÈ YO JENERE SEMÈN SA</div>
+        <div class="value mono" id="counterValue">$4,218</div>
+      </div>
+      <div class="label" style="text-align:right;">Egzanp ilistratif<br>baze sou estrateji gid la</div>
+    </div>
+  </div>
+</section>
+
+<section id="benefis">
+  <div class="wrap">
+    <div class="section-eyebrow">Benefis</div>
+    <h2 class="section-title">Poukisa gid sa a diferan</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Kreye kontni pi vit</h3>
+        <p>Aprann itilize zouti AI (script + avatar) pou pwodwi videyo kalite pwofesyonèl san ekipman koute chè.</p>
+      </div>
+      <div class="card">
+        <h3>Evite restriksyon platfòm</h3>
+        <p>Konprann ki kalite kontni ki respekte règ Facebook pou ou pa pèdi monetizasyon ou.</p>
+      </div>
+      <div class="card">
+        <h3>Sistèm repetab</h3>
+        <p>Yon pwosesis klè ou ka repete chak jou pou kenbe kwasans paj ou san w pa bloke sou "ide".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kijan-sa-fonksyone">
+  <div class="wrap">
+    <div class="section-eyebrow">Kijan sa fonksyone</div>
+    <h2 class="section-title">Kat etap pou pase de zewo a monetize</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num mono">01</div>
+        <div>
+          <h3>Chwazi nich ou</h3>
+          <p>Idantifye sijè ki gen odyans fidèl — relasyon, motivasyon, biznis lokal, elatriye.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num mono">02</div>
+        <div>
+          <h3>Kreye kontni ak AI</h3>
+          <p>Itilize script AI ak avatar pou pwodui videyo kout ki kenbe atansyon moun k ap gade.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num mono">03</div>
+        <div>
+          <h3>Poste ak grandi</h3>
+          <p>Swiv yon frekans postaj ki bay pi bon rezilta ak jan pou analize sa k mache.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num mono">04</div>
+        <div>
+          <h3>Aktive monetizasyon</h3>
+          <p>Ranpli kondisyon Facebook epi mande envitasyon monetizasyon nan Business Support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ka-itilizasyon">
+  <div class="wrap">
+    <div class="section-eyebrow">Ka itilizasyon</div>
+    <h2 class="section-title">Pou ki kalite kreyatè gid sa a fèt</h2>
+    <div class="usecase-list">
+      <div class="usecase">
+        <span class="usecase-tag">Relasyon</span>
+        <p>Paj ki pale sou relasyon ak konsèy pou koup k ap chèche grandi ak videyo emosyonèl.</p>
+      </div>
+      <div class="usecase">
+        <span class="usecase-tag">Motivasyon</span>
+        <p>Kontni motivasyonèl chak jou ak avatar AI pou kenbe odyans angaje.</p>
+      </div>
+      <div class="usecase">
+        <span class="usecase-tag">Biznis Lokal</span>
+        <p>Ti biznis ki vle prezans sou Facebook san yo pa bezwen aparèt sou kamera.</p>
+      </div>
+      <div class="usecase">
+        <span class="usecase-tag">Kontni Kreyòl</span>
+        <p>Kreyatè ki vle pwodui kontni an Kreyòl oswa Franse pou odyans dyaspora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="temwayaj">
+  <div class="wrap">
+    <div class="section-eyebrow">Temwayaj</div>
+    <h2 class="section-title">Sa kreyatè yo di</h2>
+    <div class="testi-grid">
+      <div class="testi">
+        <p class="quote">"Mwen te kòmanse ak zewo eksperyans AI. Nan de semèn mwen te gen premye videyo m ki te fè plizyè milye vi."</p>
+        <div class="who">— Kreyatè kontni, exanp</div>
+      </div>
+      <div class="testi">
+        <p class="quote">"Etap yo klè, mwen pa t bezwen devine anyen. Mwen sèlman swiv sistèm nan."</p>
+        <div class="who">— Kreyatè kontni, exanp</div>
+      </div>
+      <div class="testi">
+        <p class="quote">"Pati sou règ monetizasyon an te sove m — mwen te prèske pèdi aksè m."</p>
+        <div class="who">— Kreyatè kontni, exanp</div>
+      </div>
+    </div>
+    <p class="testi-placeholder-note">Nòt: Sa yo se temwayaj egzanp. Ranplase yo ak vrè temwayaj kliyan ou yo lè ou genyen yo.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-eyebrow">Kesyon</div>
+    <h2 class="section-title">Kesyon moun poze souvan</h2>
+    <details class="faq-item">
+      <summary>Ki sa m bezwen pou m kòmanse?</summary>
+      <p>Yon telefòn oswa òdinatè, koneksyon entènèt, ak yon paj Facebook oswa Instagram. Gid la montre w ki zouti AI gratis/abòdab pou itilize.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Konbyen tan pou m wè rezilta?</summary>
+      <p>Sa depann de frekans postaj ak nich ou, men si ou swiv sistèm nan chak jou, anpil kreyatè kòmanse wè kwasans nan premye 2-4 semèn yo.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Èske gid la mache pou nenpòt nich?</summary>
+      <p>Prensip yo aplikab pou pifò nich, men egzanp yo konsantre sou kontni relasyon, motivasyon, ak biznis lokal.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Kijan peman an fèt?</summary>
+      <p>Peman fèt dirèkteman sou Gumroad, yon platfòm sekirize. Ou resevwa gid la imedyatman apre acha.</p>
+    </details>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <div class="final-cta">
+      <h2>Pare pou kòmanse monetize kontni ou?</h2>
+      <p>Jwenn tout sistèm nan nan yon sèl gid — pare pou itilize jodi a.</p>
+      <a class="btn-primary" href="https://gumroad.com/l/REMPLASE-AK-LYEN-OU" target="_blank" rel="noopener">Achte Gid la sou Gumroad →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 GidAIMonetize. Tout dwa rezève.</div>
+</footer>
+
+<script>
+  // Signature earnings counter: gentle upward tick, respects reduced motion
+  (function(){
+    const el = document.getElementById('counterValue');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(prefersReduced) return;
+    let base = 4218;
+    setInterval(()=>{
+      base += Math.floor(Math.random()*7)+1;
+      el.textContent = '$' + base.toLocaleString('en-US');
+    }, 2200);
+  })();
+</script>
+
+</body>
+</html>
+
 <head>
 <meta charset="UTF-8">
 <title>SDK ENTERTAINMENT | Fotografía y Video Profesional</title>
